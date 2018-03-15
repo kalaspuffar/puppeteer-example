@@ -28,8 +28,12 @@ const puppeteer = require('puppeteer');
 
   console.log(performanceFirst);
 
-  console.log('Time to interactive first: ' + (performanceFirst.domInteractive - performanceFirst.navigationStart));
-  console.log('Time to interactive second: ' + (performanceSecond.domInteractive - performanceSecond.navigationStart));
+  console.log('Time to interactive first: ' + 
+    (performanceFirst.domInteractive - 
+    performanceFirst.navigationStart));
+  console.log('Time to interactive second: ' + 
+    (performanceSecond.domInteractive - 
+    performanceSecond.navigationStart));
 
   await browser.close();
 })();
